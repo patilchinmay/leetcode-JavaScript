@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/word-search/submissions/
-
+# DFS
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
         
