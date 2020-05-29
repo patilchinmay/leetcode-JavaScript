@@ -1,4 +1,4 @@
-# Solutions to problems of leetcode in Python, JavaScript
+# Solutions to leetcode problems in Python, JavaScript
 
 Solution are in folders `javascript` and `python`.
 The filename represents the name of the problem on leetcode.
