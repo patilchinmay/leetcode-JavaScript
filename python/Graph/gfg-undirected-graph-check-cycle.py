@@ -40,22 +40,29 @@ class Graph:
         return False
 
 if __name__ == "__main__":
-    # graph = Graph(7)
-    # graph.addEdge(0,1)
-    # graph.addEdge(0,2)
-    # graph.addEdge(1,3)
-    # graph.addEdge(1,4)
-    # graph.addEdge(2,5)
-    # graph.addEdge(2,6)
+    import sys
 
-    graph = Graph(4)
-    graph.addEdge(0,1)
-    graph.addEdge(1,2)
-    graph.addEdge(2,3)
-    graph.addEdge(3,0)
+    # python gfg-undirected-graph-check-cycle.py 2 [[1,0],[0,1]]
+    # python gfg-undirected-graph-check-cycle.py 7 [[0,1],[0,2],[1,3],[1,4],[2,5],[2,6]]
+    # python gfg-undirected-graph-check-cycle.py 4 [[0,1],[1,2],[2,3],[3,0]]
 
+    if len(sys.argv) == 3:
+        import json
+        graph = Graph(int(sys.argv[1]))
+        edges = json.loads(sys.argv[2])
+
+        for edge in edges:
+            graph.addEdge(int(edge[0]),int(edge[1]))
+    else:
+        graph = Graph(7)
+        graph.addEdge(0,1)
+        graph.addEdge(0,2)
+        graph.addEdge(1,3)
+        graph.addEdge(1,4)
+        graph.addEdge(2,5)
+        graph.addEdge(2,6)
+    
     graph.printGraph()
-
     if graph.checkCycle():
         print("The graph is cyclic")
     else:
