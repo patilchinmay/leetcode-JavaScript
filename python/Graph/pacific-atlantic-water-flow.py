@@ -33,7 +33,7 @@ class Solution:
     
     def dfs(self, row, col, parent_val, matrix, ocean):
         # Check the boundaries
-        if row < 0 or col < 0 or row >= len(matrix) or col >= len(matrix[0]):
+        if not ( 0 <= row < len(matrix) and 0 <= col < len(matrix[0]) ):
             return
         
         # Don't visit an already visited node
