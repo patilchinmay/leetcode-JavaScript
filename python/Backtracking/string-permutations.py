@@ -26,4 +26,4 @@ class Solution:
 
 if __name__ == "__main__":
 	solution = Solution()
-	solution.string_permutations("ABC")
+	solution.string_permutations("123")
