@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/subsets/submissions/
 # https://www.youtube.com/watch?v=bGC2fNALbNU
-# Create a horizontal tree of traversing this problem to understand better.
+# Create a horizontal tree of traversing this problem to understand better. (See evernote)
 # At index 3 in the graph, all possibilities are calculated.
 
 class Solution:
