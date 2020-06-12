@@ -1,4 +1,7 @@
 # https://leetcode.com/problems/subsets/submissions/
+# https://www.youtube.com/watch?v=bGC2fNALbNU
+# Create a horizontal tree of traversing this problem to understand better.
+# At index 3 in the graph, all possibilities are calculated.
 
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
@@ -7,7 +10,8 @@ class Solution:
         self.backtrack(0, path, nums, answer)
         return answer
 
-    def backtrack(self, index, path, nums, answer):        
+    def backtrack(self, index, path, nums, answer):
+        # Define return condition   
         if index == len(nums):
             answer.append(path.copy())
             return
