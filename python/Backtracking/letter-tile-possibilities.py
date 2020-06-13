@@ -5,11 +5,11 @@ class Solution:
         # Using set so that duplicates will not be counted even if input has repeating letters.
         # Use list if it is confirmed that input will have distinct letters.
         answer = set()
-		
-		# Initially available_items == tiles (as we have not started, so all possibilities are available) and current_path is empty
+    
+        # Initially available_items == tiles (as we have not started, so all possibilities are available) and current_path is empty
         current_path = []
         available_items = list(tiles) # Using as list so it is easy to manipulate
-		
+    
         self.backtrack(0, answer, current_path, available_items, tiles )
         
         return(len(answer))
@@ -18,7 +18,7 @@ class Solution:
         # define returning condition for recursion (dfs)
         if index == len(tiles):
             return
-			
+      
         # Initially available_items == tiles (as we have not started, so all possibilities are available) and current_path is empty
         for i in range(len(available_items)):
             '''
@@ -51,6 +51,6 @@ class Solution:
             answer.add("".join(current_path))
             
             self.backtrack( index+1, answer, current_path, available_items, tiles )
-			
+      
             # Reverse the processing that we did earlier a.k.a. backtrack
             available_items.insert(i, current_path.pop())
