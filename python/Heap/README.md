@@ -1,6 +1,4 @@
-# How to deal with k smallest/largest items question
-
-> This is not a leetcode question
+# Dealing with k smallest/largest items question
 
 ## For k smallest => Use max-heap of size K
 
