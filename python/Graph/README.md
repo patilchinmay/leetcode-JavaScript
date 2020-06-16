@@ -5,8 +5,8 @@
 > Most of the graph traversal questions can be solved by DFS
 
 To check if DFS applies, we have to understand following:
-- Do we not have all the information related to graph
-- Do we need to visit all the nodes in graph to gather the required information
+- Do we have all the information related to graph?
+- Do we need to visit all the nodes in graph to gather the required information?
 
 The technique to write a DFS solution has 3 steps:
 1. Check the boundaries and conditions
