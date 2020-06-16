@@ -1,12 +1,16 @@
-# Not a leetcode question
-# Experimentation with k smallest/largest items
+# How to deal with k smallest/largest items question
 
-# For k smallest => Use max-heap of size K
-# Beacause, max-heap pops the maximum item, when all (n-k) max items are popped, you'll end up with (k) smallest items
+> This is not a leetcode question
 
-# For k largest => Use min-heap of size K
-# Justification is same as above
+## For k smallest => Use max-heap of size K
 
+Beacause, max-heap pops the maximum item, when all (n-k) max items are popped, you'll end up with (k) smallest items
+
+## For k largest => Use min-heap of size K
+
+Beacause, min-heap pops the minimum item, when all (n-k) min items are popped, you'll end up with (k) largest items
+
+```
 import heapq
 
 class Solution:
@@ -59,3 +63,5 @@ if __name__ == "__main__":
 	solution.k_smallest()
 	print("k-largest : ")
 	solution.k_largest()
+
+```
