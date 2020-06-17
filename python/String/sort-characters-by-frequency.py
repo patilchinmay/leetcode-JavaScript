@@ -6,9 +6,9 @@ class Solution:
     def frequencySort(self, s: str) -> str:
         counter = Counter(s)
         
-        ans = ""
+        ans = []
         
         for k, v in counter.most_common():
             ans += v*k
             
-        return ans
+        return "".join(ans)
