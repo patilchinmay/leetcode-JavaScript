@@ -2,7 +2,7 @@
 
 ## Template for Binary Search. It takes an array as input and returns the index.
 
-- Time Complexity: O(log⁡N), where NNN is the length of input array A.
+- Time Complexity: O(log⁡N), where N is the length of input array.
 
 - Space Complexity: O(1).
 
