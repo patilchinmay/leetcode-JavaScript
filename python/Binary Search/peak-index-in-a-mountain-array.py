@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/peak-index-in-a-mountain-array/submissions/
 
 class Solution:
-    def peakIndexInMountainArray(self, A: List[int]) -> int:
+    def peakIndexInMountainArray(self, A: [int]) -> int:
         
         left = 0
         right = len(A)-1
