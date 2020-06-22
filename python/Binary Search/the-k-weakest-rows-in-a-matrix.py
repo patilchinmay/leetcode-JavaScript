@@ -33,5 +33,6 @@ class Solution:
 			# If the middle is 0, go and look into L.H.S searchspace
             elif array[middle] == 0:
                 right = middle - 1
-                
+	
+		# Returning index+1, because we need to tell how many 1's i.e index of last 1 + 1
         return left+1
