@@ -7,18 +7,16 @@
 #         self.left = left
 #         self.right = right
 
+from collections import defaultdict
 class Solution:
     def verticalTraversal(self, root) -> [[int]]:
         
-        nodes = dict()
+        nodes = defaultdict(list)
         
         def traverse(node, x, y):
             
-            if x in nodes:
-                nodes[x].append((node.val, y))
-            else:
-                nodes[x] = [(node.val, y)]
-            
+            nodes[x].append((node.val, y))
+
             if node.left != None:
                 traverse(node.left, x-1, y-1)
             
@@ -28,9 +26,10 @@ class Solution:
         traverse(root, 0, 0)
         
         for key in nodes:
+            # Sort the items in a level as per given constrains
             nodes[key].sort(key=lambda x: (x[1], -1*x[0]), reverse=True)
-            for i in range(len(nodes[key])):
-                nodes[key][i] = nodes[key][i][0]
+            # Remove y's from the list
+            nodes[key] = [item[0] for item in nodes[key]]
         
         # print(nodes)
         
